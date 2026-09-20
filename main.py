@@ -1,7 +1,10 @@
 from pynput import keyboard
 from timer import Timer # Class handles timer and display
+from session import Session
 
-timer = Timer()
+session = Session()
+timer = Timer(session)
+
 app_is_running = True # Check if the app is running.
 
 # controls
