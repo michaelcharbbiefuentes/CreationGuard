@@ -36,14 +36,15 @@ This project is currently being developed as a personal portfolio project.
 CreationGuard will gradually evolve from a simple focus timer into a complete productivity and distraction-management application.
 
 ## Completed Features
-| Feature                         | Status | Completed          |
-|---------------------------------|---|--------------------|
-| Basic timer and display         | Done | September 12, 2026 |
-| Keyboard controls for the timer | Done | September 13, 2026 |
-| Pause and resume timer          | Done | September 14, 2026 |
-| Track accumulated elapsed time  | Done | September 17, 2026 |
-| Git version control             | Done | September 18, 2026 |
-| GitHub repository setup         | Done | September 18, 2026 |
-| Project README                  | Done | September 18, 2026 |
-| Session history                 | In Progress | —                  |
-| Usage dashboard                 | Planned | —                  |
+| Feature                         | Status      | Completed          |
+|---------------------------------|-------------|--------------------|
+| Basic timer and display         | Done        | September 12, 2026 |
+| Keyboard controls for the timer | Done        | September 13, 2026 |
+| Pause and resume timer          | Done        | September 14, 2026 |
+| Track accumulated elapsed time  | Done        | September 17, 2026 |
+| Git version control             | Done        | September 18, 2026 |
+| GitHub repository setup         | Done        | September 18, 2026 |
+| Project README                  | Done        | September 18, 2026 |
+| Session history                 | Done        | October 4, 2026    |
+| Dopameter usage                 | in progress | —                  |
+| Usage dashboard                 | Planned     | —                  |

@@ -1,5 +1,5 @@
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 
 class Timer:
     def __init__(self, session):
@@ -8,13 +8,16 @@ class Timer:
         self.session_start_time = 0 # session starting time
         self.elapsed_time = 0 #total elapsed time
         self.session_start_datetime = 0 # time stamp when session started
+        self.session_date = 0 # date of session
 
     # check current time
     def check_current_time(self):
-        epoch_now = time.time()
-        local_dt = datetime.fromtimestamp(epoch_now)
+        local_datetime = datetime.now(timezone.utc).astimezone()
+        date_today = local_datetime.strftime("%B %d, %Y")
+        time_now = local_datetime.strftime("%I:%M:%S")
+        self.session_date = date_today
 
-        return local_dt
+        return time_now
 
     # timer and display
     def timer(self):
@@ -52,7 +55,7 @@ class Timer:
 
         else:
             # Create and Save Session
-            print(f"\n[Spacebar Pressed] System is now: PAUSED")
+            print(f"\n[Spacebar Pressed] System is now: STOPPED")
             self.save_session()
             self.elapsed_time = 0
             print("=====================")
@@ -64,17 +67,10 @@ class Timer:
         else:
             pass
 
-        self.session.display_all_session()
+        self.session.display_session()
         self.elapsed_time = 0
         print('App terminated')
 
     def save_session(self):
-        self.session.create_session(self.session_start_datetime, self.check_current_time(), self.elapsed_time)
+        self.session.create_session(self.session_date, self.session_start_datetime, self.check_current_time(), self.elapsed_time)
 
-
-
-
-
-        # localtime = time.strftime("%B %d, %Y %I:%M:%S %p")
-        # print(f'Date Today: {localtime}')
-        # current_time = time.strftime("%I:%M:%S %p")
